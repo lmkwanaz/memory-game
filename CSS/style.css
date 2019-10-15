@@ -1,0 +1,80 @@
+/* .container {
+    width: 200px;
+    height: 260px;
+    position: relative;
+  
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}*/
+
+body {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 50px 0;
+    background-color: white;
+    background-image: url("../image/photo-1566258123855-fdcbaca64695.jpeg")
+  }
+
+.card {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.card div {
+    display: block;
+    height: 30%;
+    width: 100%;
+    line-height: 260px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 140px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card .front {
+  
+}
+.card .back {
+    
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+} 
+
+
+ 
+  
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #aaa;
+    margin: 20px 0;
+    /* padding: 10px; */
+    width: 100%;
+    min-height: 200px;
+    border: 2px #ccc solid;
+    /* color: #fff; */
+  } 
