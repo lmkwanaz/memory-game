@@ -1,3 +1,3 @@
 function flip() {
-  $('.card').toggleClass('flipped');
+  $('.me').toggleClass('flipped');
 }
