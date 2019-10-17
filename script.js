@@ -6,6 +6,7 @@ let firstCard, secondCard;
 var gamePlay = false;
 var tileArray = [];
 var tileImages = [];
+var playLockout = false;
 var startButton = getElementById('start');
 var message = getElementById('message');
 var gameBoard = getElementById('gameBoard')
@@ -13,8 +14,8 @@ var gameBoard = getElementById('gameBoard')
 startButton.addEventListener('click', start)
 
 function start(){
-
-    startButton.style.display = 'none'
+    playLockout = false;
+    startButton.style.display = 'none';
     if (!gamePlay){
         gamePlay = true;
         buildArray();
@@ -86,15 +87,15 @@ function shuffle(array) {
 }
 
 function buildArray() {
-    for (var x = 1; x < 7; x++) {
+    for (let x = 1; x < 7; x++) {
       tileImages.push(x + '.jpeg');
     }
   }
   function buildBoard() {
     var html = "";
-    for (var x = 0; x <= (tileArray.length - 1); x++) {
+    for (let x = 0; x <= (tileArray.length - 1); x++) {
       html += '<div class="gameTile"><div class="gameTile">';
-      html += '<img id="cardz' + x + '" src="images/back.jpg" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
+      html += '<img id="cardz' + x + '" src="docs/img/back.jpeg" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
     }
     gameBoard.innerHTML = html;
   }

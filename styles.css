@@ -1,55 +1,47 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    display: flex;
-    background-color: #00273E;
-}
-
-.memory-game {
-    width: 640px;
-    height: 640px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    perspective: 1000px;
-}
-
-.memory-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
-    margin: 5px;
-    position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform .5s
-}
-
-.memory-card:active {
-    transform: scale(.97);
-    transition: transform .2s;
-}
-
-.memory-card.flip {
-    transform: rotateY(180deg);
-}
-
-.front-face,
-.back-face {
+#wrapper {
+    width: 800px;
+  }
+  
+  .main {
     width: 100%;
-    height: 100%;
+    border: 1px solid black;
+  }
+  
+  #gameboard {
+    margin: 0 auto;
+    width: 610px;
+  }
+  
+  #message {
+    text-align: center;
     padding: 20px;
-    border-radius: 5px;
-    position: absolute;
-    background: #045F93;
-    backface-visibility: hidden;
-}
-
-.front-face {
-    transform: rotateY(180deg);
-}
-
+  }
+  
+  .btn {
+    background: #3498db;
+    text-align: center;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+  }
+  
+  .flipImage {
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  .gameTile {
+    padding: 2px;
+    width: 196px;
+    display: inline-block;
+  }
