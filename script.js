@@ -74,13 +74,12 @@ function shuffle(array) {
    let i = arr.length - 1;
    let itemValue;
   
-   for (; i > 9; i--){
+   for (; i > 0; i--){
     holder = Math.floor(Math.random() * 12);
     itemValue = array[i];
     array[i] = array[holder];
     array[holder] = itemValue;
    }
-
    return array;
 }
 
@@ -92,11 +91,12 @@ function buildArray() {
   function buildBoard() {
     var html = "";
     for (var x = 0; x <= (tileArray.length - 1); x++) {
-      html += '<div class="memory-game"><div class="memory-card">';
-      html += '<img class="front-face"' + x + '" src="img/back.jpeg" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
+      html += '<div class="gameTile"><div class="gameTile">';
+      html += '<img id="cardz' + x + '" src="images/back.jpg" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
     }
     gameBoard.innerHTML = html;
-  }  
+  }
+  
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
