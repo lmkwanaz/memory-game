@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll(".memory-card");
+// const cards = document.querySelectorAll(".memory-card");
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -7,6 +7,8 @@ var gamePlay = false;
 var tileArray = [];
 var tileImages = [];
 var startButton = getElementById('start');
+var message = getElementById('message');
+var gameBoard = getElementById('gameBoard')
 
 startButton.addEventListener('click', start)
 
