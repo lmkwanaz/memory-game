@@ -6,9 +6,13 @@ let firstCard, secondCard;
 var gamePlay = false;
 var tileArray = [];
 var tileImages = [];
+var startButton = getElementById('start');
+
+startButton.addEventListener('click', start)
 
 function start(){
 
+    startButton.style.display = 'none'
     if (!gamePlay){
         gamePlay = true;
         buildArray();
@@ -82,14 +86,14 @@ function shuffle(array) {
 
 function buildArray() {
     for (var x = 1; x < 7; x++) {
-      tileImages.push(x + '.jpg');
+      tileImages.push(x + '.jpeg');
     }
   }
   function buildBoard() {
     var html = "";
     for (var x = 0; x <= (tileArray.length - 1); x++) {
       html += '<div class="memory-game"><div class="memory-card">';
-      html += '<img class="front-face' + x + '" src="img/back.jpeg" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
+      html += '<img class="front-face"' + x + '" src="img/back.jpeg" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
     }
     gameBoard.innerHTML = html;
   }  
