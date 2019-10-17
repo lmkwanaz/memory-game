@@ -3,6 +3,21 @@ const cards = document.querySelectorAll(".memory-card");
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+var gamePlay = false;
+var tileArray = [];
+var tileImages = [];
+
+function start(){
+
+    if (!gamePlay){
+        gamePlay = true;
+        buildArray();
+        tileArray = tileImages.concat(tileImages);
+        shuffle(tileArray);
+        buildBoard();
+        message.innerHTML = "Click any tile"
+    }
+}
 
 function flipCard() {
     if (lockBoard) return;
@@ -52,10 +67,10 @@ function resetBoard() {
 
 function shuffle(array) {
 
-   let i = 0;
+   let i = arr.length - 1;
    let itemValue;
   
-   for (; i < array.length; i++){
+   for (; i > 9; i--){
     holder = Math.floor(Math.random() * 12);
     itemValue = array[i];
     array[i] = array[holder];
@@ -64,6 +79,20 @@ function shuffle(array) {
 
    return array;
 }
+
+function buildArray() {
+    for (var x = 1; x < 7; x++) {
+      tileImages.push(x + '.jpg');
+    }
+  }
+  function buildBoard() {
+    var html = "";
+    for (var x = 0; x <= (tileArray.length - 1); x++) {
+      html += '<div class="memory-game"><div class="memory-card">';
+      html += '<img class="front-face' + x + '" src="img/back.jpeg" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
+    }
+    gameBoard.innerHTML = html;
+  }  
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
