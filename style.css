@@ -1,3 +1,7 @@
+body{
+  background-image: url('./images/background.jpeg')
+}
+
 #wrapper {
   width: 800px;
 }
@@ -18,7 +22,7 @@
 }
 
 .btn {
-  background: #dbb434;
+  background: #3498db;
   text-align: center;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
@@ -31,7 +35,7 @@
 }
 
 .btn:hover {
-  background: #867e4d;
+  background: #3cb0fd;
   text-decoration: none;
 }
 
