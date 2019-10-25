@@ -8,12 +8,12 @@ var gamePlay = false; // controls if we rebuild the board restart
 
 var startButton = document.getElementById('start');
 var gameBoard = document.getElementById('gameboard');
-var message = document.getElementById('message');
+var message = document.getElementById('message');console.log(startbutton);
 
 //event listens
-startButton.addEventListener('click', startGame);
+startButton.addEventListener('click', startgame);
 
-function startGame() {
+var startgame = function startGame() {
   cardFlipped = -1;
   playLockout = false;
   startButton.style.display = 'none';
@@ -44,6 +44,7 @@ function buildBoard() {
 function pickCard(tileIndex, t) {
   if (!isinArray(t.id, tileFlippedOver) && !playLockout) {
     if (cardFlipped >= 0) {
+      console.log(cardFlipped)
       cardFlip(t, tileIndex);
       playLockout = true;
       if (checkSrc(tileFlippedOver[tileFlippedOver.length - 1]) == checkSrc(tileFlippedOver[tileFlippedOver.length - 2])) {
@@ -92,6 +93,7 @@ function isinArray(v, array) {
 function cardFlip(t, ti) {
   t.src = "images/" + tileArray[ti];
   tileFlippedOver.push(t.id);
+  
 }
 
 function checkSrc(v) {

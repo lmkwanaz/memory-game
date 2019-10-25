@@ -1,0 +1,11 @@
+{
+  "name": "gamespec.js",
+  "version": "1.0.0",
+  "description": "aa",
+  "main": "gamespec.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC"
+}
