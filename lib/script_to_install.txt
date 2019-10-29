@@ -1,0 +1,9 @@
+npm i jsdom
+npm init
+ npm i jasmine --save-dev
+/////////////////////////
+
+npm i node-jsdom
+npm init
+npm i jasmine --save-dev
+npm test

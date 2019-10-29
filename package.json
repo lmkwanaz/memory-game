@@ -1,0 +1,22 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "description": "memory game",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine spec/game.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmkwanaz/memory-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmkwanaz/memory-game/issues"
+  },
+  "homepage": "https://github.com/lmkwanaz/memory-game#readme",
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  }
+}

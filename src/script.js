@@ -6,14 +6,14 @@ var timer = '';
 var playLockout = false;
 var gamePlay = false; // controls if we rebuild the board restart
 
-var startButton = document.getElementById('start');
-var gameBoard = document.getElementById('gameboard');
-var message = document.getElementById('message');console.log(startbutton);
+var startButton = window.document.getElementById('start');
+var gameBoard = window.document.getElementById('gameboard');
+var message = window.document.getElementById('message');
 
 //event listens
-startButton.addEventListener('click', startgame);
+startButton.addEventListener('click', startGame);
 
-var startgame = function startGame() {
+ function startGame() {
   cardFlipped = -1;
   playLockout = false;
   startButton.style.display = 'none';
@@ -70,7 +70,7 @@ function pickCard(tileIndex, t) {
 function hideCard() {
   for (var x = 0; x < 2; x++) {
     var vid = tileFlippedOver.pop();
-    document.getElementById(vid).src = "images/back.jpg";
+    window.document.getElementById(vid).src = "images/back.jpg";
   }
   clearInterval(timer);
   playLockout = false;
@@ -97,7 +97,7 @@ function cardFlip(t, ti) {
 }
 
 function checkSrc(v) {
-  var v = document.getElementById(v).src;
+  var v = window.document.getElementById(v).src;
   return v;
 }
 
