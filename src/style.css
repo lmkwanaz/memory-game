@@ -1,5 +1,6 @@
 body{
-  background-image: url('./images/background.jpeg')
+  background-color: rgb(61, 58, 26);
+  /*background-image: url('./images/background.jpeg')*/
 }
 
 #wrapper {
@@ -8,17 +9,26 @@ body{
 
 .main {
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid black; 
+   margin-bottom: 10000px;
+   position: absolute;
+
 }
 
 #gameboard {
   margin: 0 auto;
   width: 610px;
+  margin-left: 170px;
+  
 }
 
 #message {
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
   padding: 20px;
+  margin: 40px;
+  margin-left: 200px;
 }
 
 .btn {
